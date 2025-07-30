@@ -20,5 +20,5 @@ public abstract class WeaponBase : ScriptableObject
     public float cooldown;
     public WeaponRarity rarity;
 
-    public abstract void Attack(Transform attackOrigin, LayerMask enemyLayer);
+    public abstract void Attack(Transform attackOrigin);
 }

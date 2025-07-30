@@ -4,14 +4,19 @@ using UnityEngine;
 public class FistWeapon : WeaponBase
 {
     public float attackRange = 1.5f;
+    public LayerMask enemyLayer;
 
-    public override void Attack(Transform attackOrigin, LayerMask enemyLayer)
+    public override void Attack(Transform attackOrigin)
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackOrigin.position, attackRange, enemyLayer);
+        Collider[] hits = Physics.OverlapSphere(attackOrigin.position, attackRange, enemyLayer);
+
         foreach (var hit in hits)
         {
-            Debug.Log("Hit " + hit.name);
-            // You can reduce enemy health here if you have a damage script
+           EnemyHealth enemy = hit.GetComponent<EnemyHealth>();
+           if (enemy != null)
+           {
+            enemy.TakeDamage(damage);
+           }
         }
     }
 }

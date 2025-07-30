@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     {
        if (Time.time >= nextAttackTime)
        {
-        equippedWeapon.Attack(attackPoint, enemyLayer);
+        equippedWeapon.Attack(attackPoint);
         nextAttackTime = Time.time + equippedWeapon.cooldown;
        } 
     }
