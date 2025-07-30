@@ -6,7 +6,6 @@ public class PlayerAttack : MonoBehaviour
 {
     public WeaponBase equippedWeapon;
     public Transform attackPoint;
-    public LayerMask enemyLayer;
 
     private float nextAttackTime = 0f;
 

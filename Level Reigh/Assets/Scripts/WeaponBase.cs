@@ -18,7 +18,8 @@ public abstract class WeaponBase : ScriptableObject
     public string weaponName;
     public float damage;
     public float cooldown;
+    public float attackRange;
     public WeaponRarity rarity;
 
-    public abstract void Attack(Transform attackOrigin);
+    public abstract void Attack(Transform attackPoint);
 }

@@ -15,5 +15,8 @@ MonoBehaviour:
   weaponName: Fist
   damage: 10
   cooldown: 0.5
-  rarity: 0
   attackRange: 1.5
+  rarity: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
